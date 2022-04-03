@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { blueGrey } from '@mui/material/colors';
-const primary = blueGrey[900];
 
 export default function Test() {
   return (
@@ -19,17 +18,15 @@ export default function Test() {
       <Script src="/sketch.js" />
       <div className={`${styles.grid_wrapper}`}>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container justifyContent="flex-end">
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+          <Grid container justifyContent="center">
+            <Grid item xs={12} sm={7} md={5} lg={4}>
               <div className={`${styles.auth_wrapper}`}>
-                <img src='img/logo.png' />
-                <div >
+                <img src='img/logo-md.png' />
                   <form className={`${styles.form}`}>
-                    <TextField id="email" label="Email" variant="standard" sx={{ borderColor: primary }} />
-                    <TextField id="password" type="password" label="Senha" variant="standard" />
-                    <Button variant="text" sx={{ color: primary }}>Entrar</Button>
+                    <TextField id="email" label="Email" variant="standard" color="secondary" />
+                    <TextField id="password" type="password" label="Senha" color="secondary" variant="standard" />
+                    <Button variant="text" color="secondary">Entrar</Button>
                   </form>
-                </div>
               </div>
             </Grid>
           </Grid>

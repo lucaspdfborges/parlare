@@ -48,9 +48,6 @@ let sketch = function(p) {
       });
     };
   
-    p.keyPressed = function() {
-      if (p.keyCode === 80) p.saveCanvas('sketch_' + THE_SEED, 'jpeg');
-    };
   
     class Particle {
       constructor(x, y, phi) {
@@ -78,7 +75,7 @@ let sketch = function(p) {
   
       display(index) {
         if (this.val > 0.482 && this.val < 0.518) {
-          p.stroke(p.color(255, 255, 255, 10));
+          p.stroke(p.color(255, 255, 255, 5));
           //if (index === 2) p.stroke(255, 25, 20, 20);
           //else p.stroke(20, 10);
           p.push();
